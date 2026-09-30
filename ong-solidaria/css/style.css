@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f7f7f7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+
+.header {
+  background-color: #176b4d;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: #e2f3ec;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #123d30;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
+
+/* Botões */
+
+.button,
+button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #176b4d;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+  background-color: #105239;
+}
+
+/* Seções */
+
+.about,
+.contact,
+.projects,
+.voluntariado,
+.page-content {
+  padding: 3rem 0;
+}
+
+.about h2,
+.contact h2,
+.projects h2,
+.voluntariado h2 {
+  color: #176b4d;
+}
+
+/* Projetos */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  overflow: hidden;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #176b4d;
+}
+
+/* Voluntariado */
+
+.voluntariado img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+/* Contato */
+
+.contact {
+  background-color: #fff;
+}
+
+address {
+  font-style: normal;
+}
+
+address a {
+  color: #176b4d;
+}
+
+/* Formulário */
+
+form {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+fieldset {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #176b4d;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font: inherit;
+  background-color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #a4d8c6;
+  border-color: #176b4d;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Rodapé */
+
+footer {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+  background-color: #123d30;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .hero img {
+    max-height: 350px;
+  }
+}
