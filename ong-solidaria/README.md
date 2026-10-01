@@ -61,7 +61,7 @@ ong-solidaria/
 ## Como executar localmente
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone git@github.com:Nmartins6/ong-solidaria.git
 cd ong-solidaria
 npm install
 npm run dev
