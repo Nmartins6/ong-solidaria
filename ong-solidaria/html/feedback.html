@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Demonstração dos componentes de feedback da plataforma Solidariedade em Ação.">
+
+    <title>Componentes de Feedback | Solidariedade em Ação</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/feedback.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                Solidariedade em Ação
+            </a>
+
+            <nav aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html">Seja voluntário</a></li>
+                    <li>
+                        <a href="feedback.html" aria-current="page">
+                            Feedback
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container feedback-page">
+
+        <header class="feedback-header">
+            <p class="eyebrow">Design System</p>
+
+            <h1>Componentes de feedback</h1>
+
+            <p>
+                Demonstração dos componentes utilizados para comunicar
+                estados, resultados e informações importantes ao usuário.
+            </p>
+        </header>
+
+        <!-- BADGES -->
+
+        <section class="feedback-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Categorização</p>
+                    <h2>Badges</h2>
+                </div>
+
+                <p>
+                    Identificam rapidamente o estado de projetos,
+                    campanhas e solicitações.
+                </p>
+            </div>
+
+            <div class="feedback-card">
+                <div class="badge-list">
+                    <span class="badge badge-success">
+                        <span aria-hidden="true">✓</span>
+                        Ativo
+                    </span>
+
+                    <span class="badge badge-info">
+                        <span aria-hidden="true">●</span>
+                        Em andamento
+                    </span>
+
+                    <span class="badge badge-warning">
+                        <span aria-hidden="true">!</span>
+                        Aguardando
+                    </span>
+
+                    <span class="badge badge-danger">
+                        <span aria-hidden="true">!</span>
+                        Urgente
+                    </span>
+
+                    <span class="badge badge-neutral">
+                        Encerrado
+                    </span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ALERTAS -->
+
+        <section class="feedback-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Mensagens contextuais</p>
+                    <h2>Alertas</h2>
+                </div>
+
+                <p>
+                    Informam resultados e situações que precisam da
+                    atenção do usuário.
+                </p>
+            </div>
+
+            <div class="alerts-list">
+
+                <div class="alert alert-success" role="status">
+                    <div class="alert-icon" aria-hidden="true">✓</div>
+
+                    <div>
+                        <strong>Cadastro realizado com sucesso</strong>
+                        <p>
+                            Seus dados foram recebidos e nossa equipe entrará
+                            em contato.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="alert alert-info" role="status">
+                    <div class="alert-icon" aria-hidden="true">i</div>
+
+                    <div>
+                        <strong>Nova campanha disponível</strong>
+                        <p>
+                            A Campanha do Agasalho está recebendo novos voluntários.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning" role="alert">
+                    <div class="alert-icon" aria-hidden="true">!</div>
+
+                    <div>
+                        <strong>Atenção aos dados informados</strong>
+                        <p>
+                            Verifique seu telefone e endereço antes de continuar.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger" role="alert">
+                    <div class="alert-icon" aria-hidden="true">×</div>
+
+                    <div>
+                        <strong>Não foi possível concluir a operação</strong>
+                        <p>
+                            Alguns campos obrigatórios ainda precisam ser preenchidos.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- COMPONENTES INTERATIVOS -->
+
+        <section class="feedback-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Microinterações</p>
+                    <h2>Modal e Toast</h2>
+                </div>
+
+                <p>
+                    Utilize os botões abaixo para testar os estados
+                    interativos da interface.
+                </p>
+            </div>
+
+            <div class="feedback-card action-card">
+
+                <div>
+                    <h3>Confirmação de participação</h3>
+                    <p>
+                        O modal é utilizado quando uma ação exige atenção
+                        ou confirmação explícita.
+                    </p>
+
+                    <button type="button" class="button" id="open-modal">
+                        Abrir modal
+                    </button>
+                </div>
+
+                <div>
+                    <h3>Notificação rápida</h3>
+                    <p>
+                        O toast informa o resultado de uma ação sem interromper
+                        a navegação do usuário.
+                    </p>
+
+                    <button type="button" class="button button-secondary" id="show-toast">
+                        Exibir toast
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- MODAL -->
+
+    <div class="modal-overlay" id="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+        hidden>
+        <div class="modal-content">
+
+            <div class="modal-icon" aria-hidden="true">
+                ♥
+            </div>
+
+            <h2 id="modal-title">
+                Confirmar participação
+            </h2>
+
+            <p>
+                Deseja confirmar sua participação como voluntário
+                na campanha Alimento para Todos?
+            </p>
+
+            <div class="modal-actions">
+                <button type="button" class="button button-outline" id="close-modal">
+                    Cancelar
+                </button>
+
+                <button type="button" class="button" id="confirm-modal">
+                    Confirmar participação
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TOAST -->
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <div class="toast-icon" aria-hidden="true">
+            ✓
+        </div>
+
+        <div>
+            <strong>Participação confirmada!</strong>
+            <p>Obrigado por apoiar esta iniciativa.</p>
+        </div>
+
+        <button type="button" class="toast-close" id="close-toast" aria-label="Fechar notificação">
+            ×
+        </button>
+    </div>
+
+
+    <footer>
+        <p>
+            &copy; 2026 Solidariedade em Ação.
+        </p>
+    </footer>
+
+</body>
+
+</html>

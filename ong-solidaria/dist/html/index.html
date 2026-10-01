@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Plataforma Solidariedade em Ação para divulgação de projetos e cadastro de voluntários."
+  >
+
+  <title>Solidariedade em Ação</title>
+  <script type="module" crossorigin src="../assets/app-Dd01n6xH.js"></script>
+  <link rel="stylesheet" crossorigin href="../assets/app-BRUliiik.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header-content">
+
+    <a
+      href="#home"
+      class="logo"
+      data-route="home"
+    >
+      Solidariedade em Ação
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menu-toggle"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="main-nav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav
+      class="main-nav"
+      id="main-nav"
+      aria-label="Navegação principal"
+    >
+      <ul class="nav-list">
+
+        <li>
+          <a href="#home" data-route="home">
+            Início
+          </a>
+        </li>
+
+        <li>
+          <a href="#projetos" data-route="projetos">
+            Projetos
+          </a>
+        </li>
+
+        <li class="dropdown" id="participar-dropdown">
+
+          <button
+            type="button"
+            class="dropdown-toggle"
+            id="participar-toggle"
+            aria-expanded="false"
+          >
+            Participar ▾
+          </button>
+
+          <ul class="dropdown-menu">
+
+            <li>
+              <a
+                href="#cadastro"
+                data-route="cadastro"
+              >
+                Cadastro
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#voluntarios"
+                data-route="voluntarios"
+              >
+                Voluntários cadastrados
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+
+<main id="app" tabindex="-1">
+  <!-- Conteúdo da SPA será renderizado aqui -->
+</main>
+
+
+<!-- Toast -->
+
+<div
+  class="toast"
+  id="toast"
+  role="status"
+  aria-live="polite"
+  aria-atomic="true"
+>
+  <div
+    class="toast-icon"
+    id="toast-icon"
+    aria-hidden="true"
+  >
+    ✓
+  </div>
+
+  <div>
+    <strong id="toast-title">
+      Sucesso
+    </strong>
+
+    <p id="toast-message"></p>
+  </div>
+
+  <button
+    type="button"
+    class="toast-close"
+    id="toast-close"
+    aria-label="Fechar notificação"
+  >
+    ×
+  </button>
+</div>
+
+
+<!-- Modal de confirmação -->
+
+<div
+  class="modal-overlay"
+  id="confirm-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-title"
+  hidden
+>
+  <div class="modal-content">
+
+    <div
+      class="modal-icon"
+      aria-hidden="true"
+    >
+      !
+    </div>
+
+    <h2 id="modal-title">
+      Confirmar ação
+    </h2>
+
+    <p id="modal-message"></p>
+
+    <div class="modal-actions">
+
+      <button
+        type="button"
+        class="button button-outline"
+        id="modal-cancel"
+      >
+        Cancelar
+      </button>
+
+      <button
+        type="button"
+        class="button button-danger"
+        id="modal-confirm"
+      >
+        Confirmar
+      </button>
+
+    </div>
+
+  </div>
+</div>
+
+
+<footer>
+  <div class="container">
+    <p>
+      &copy; 2026 Solidariedade em Ação.
+    </p>
+  </div>
+</footer>
+
+<!-- Aplicação -->
+
+
+</body>
+</html>
